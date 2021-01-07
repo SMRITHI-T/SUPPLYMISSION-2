@@ -1,9 +1,7 @@
 class Box{
     constructor(x, y) {
         var options = {
-            'restitution':0.8,
-            'friction':1.0,
-            'density':1.0
+           isStatic:true
         }
         this.width = 200;
         this.height = 100;
@@ -26,13 +24,15 @@ class Box{
         push();
         translate(this.bottomBody.position.x, this.bottomBody.position.y);
         rotate(angle1);
-        rectMode(CENTER);
+        fill("red")       
+         rectMode(CENTER);
         rect(0, 0, this.width,this.thickness);
         pop();
         
         push();
         translate(this.rightBody.position.x, this.rightBody.position.y);
         rotate(angle2);
+        fill("red")       
         rectMode(CENTER);
         rect(0, 0, this.thickness, this.height);
         pop();
@@ -40,6 +40,7 @@ class Box{
         push();
         translate(this.leftBody.position.x, this.leftBody.position.y);
         rotate(angle3);
+        fill("red")       
         rectMode(CENTER);
         rect(0, 0, this.thickness, this.height);
         pop();
